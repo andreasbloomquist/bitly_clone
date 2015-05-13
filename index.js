@@ -9,6 +9,7 @@ var viewsDir = path.join(process.cwd(), "views");
 var shortUrls = {};
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 
 app.get("/", function(req, res){
 	var homePath = path.join(viewsDir, "home.html");
